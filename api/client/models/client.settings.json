@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "name": "Client",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "sexe": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "consommations": {
+      "collection": "consommation",
+      "via": "client"
+    }
+  }
+}

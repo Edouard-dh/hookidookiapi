@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "consommations",
+  "info": {
+    "name": "Consommation"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "conso": {
+      "type": "enumeration",
+      "enum": [
+        "eau",
+        "gaz",
+        "electricite"
+      ]
+    },
+    "value": {
+      "type": "biginteger"
+    },
+    "client": {
+      "via": "consommations",
+      "model": "client"
+    }
+  }
+}
